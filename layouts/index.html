@@ -4,6 +4,10 @@
        {{ partial "portfolio/skills.html" . }}
    {{ end }}
    {{ if .Site.Params.showProjects }}
+      {{ with .Site.GetPage "section" "projects/biology" }}
+         {{ .Scratch.Set "sectionId" "projects" }}
+         {{ partial "sectionSummary" . }}
+      {{ end }}
       {{ with .Site.GetPage "section" "projects/robotics" }}
          {{ .Scratch.Set "sectionId" "projects" }}
          {{ partial "sectionSummary" . }}
