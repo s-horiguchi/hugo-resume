@@ -23,24 +23,25 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous"></noscript>
   <!-- Custom styles for this template -->
-<link rel="preload" href="{{ "css/resume.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ "css/resume.css" | absURL }}"></noscript>
+  <link rel="preload" href="{{ "css/resume.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ "css/resume.css" | absURL }}"></noscript>
   <link rel="preload" href="{{ "css/tweaks.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ "css/tweaks.css" | absURL }}"></noscript>
+    <noscript><link rel="stylesheet" href="{{ "css/tweaks.css" | absURL }}"></noscript>
   <link rel="preload" href="{{ "css/resume-override.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ "css/resume-override.css" | absURL }}"></noscript>
+    <noscript><link rel="stylesheet" href="{{ "css/resume-override.css" | absURL }}"></noscript>
   <link rel=”icon” href="{{ .Site.Params.favicon | absURL }}">
   {{ hugo.Generator }}
   {{ block "headfiles" . }}
-  <!-- pl;aceholder -->
+   <!-- pl;aceholder -->
   {{ end }}
 </head>
 <body id="page-top">
   {{ partial "nav.html" . }}
   <div class="container-fluid p-0">
     {{ block "main" . }}
-    {{ .Content }}
+      {{ .Content }}
     {{ end }}
+
     <span style="color: #999999; font-size: 60%;">Nifty <a href="https://codepen.io/wbeeftink/pen/dIaDH">tech tag lists</a> from <a class="pen-owner-link" href="https://codepen.io/wbeeftink">Wouter Beeftink</a> </span>
     {{ with $.GitInfo }}{{ with $.Site.Params.gitCommitPrefix }} | <span style="color: #999999; font-size: 60%;">Page content generated from commit: <a href="{{ . }}/{{ $.GitInfo.AbbreviatedHash }}" title="log: {{ $.GitInfo.Subject }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ end }}{{end}}
   </div>
