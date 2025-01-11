@@ -34,6 +34,13 @@
                   </a>
                 </li>
             {{ end }}
+            {{ range .Site.Params.handlesImages }}
+              <li class="list-inline-item" data-toggle="tooltip" title="{{ .name }}" data-offset="0,10" rel="me">
+                <a href="{{ .link }}">
+                  <img src="{{ .image }}" alt="{{ .name }}">
+                </a>
+              </li>
+            {{ end }}
           </ul>
         </div>
       </div>
