@@ -18,6 +18,9 @@
               {{ partial "contact-qr" . }}
             {{ end }}
         </div>
+        {{ if .Site.Params.showTopImage }}
+        <div class="top-image"><img src="{{ .Site.Params.topImage }}" alt=""></div>
+        {{ end }}
         <div>
           {{ .Content }}
           <ul class="list-inline list-social-icons mb-0">
