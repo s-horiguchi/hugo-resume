@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  {{ if .Params.noindex }}
+  <meta name="robots" content="noindex" />
+  {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{{ .Site.Title }} | {{ .Title }}</title>
   <meta property="og:title" content="{{ .Site.Title }} | {{ .Title }}" />
